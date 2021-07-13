@@ -1,5 +1,10 @@
 # random-password
 
+## utoos plugin
+```
+将plugin.json在打包后复制一份到plugin.json，并在plugin.json修改后及时备份
+```
+
 ## Project setup
 ```
 npm install
