@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <el-form label-width="100px">
-      
-        <el-input v-model="password" id="password" size="large"></el-input>
-      
-      <el-form-item label="密码长度：">
-        <el-slider v-model="length" @change="generate"></el-slider>
+
+      <el-form-item label-width="0">
+        <el-input v-model="password" id="password" size="large" disabled>
+          <div slot="suffix" style="background-color:#FFF;height: 38px;margin-top:1px">
+          <el-button icon="el-icon-refresh" circle  class="refresh-button" @click="generate"></el-button>
+          </div>
+          <el-button slot="append" @click="copyToClip(password)">复制</el-button>
+        </el-input>
       </el-form-item>
+
+      <el-form-item label="密码长度：">
+        <el-slider v-model="length" @input="generate"></el-slider>
+      </el-form-item>
+
       <el-form-item label="可用字符：">
         <el-checkbox-group v-model="symbolType" @change="generate">
           <el-checkbox label="ABC"></el-checkbox>
@@ -24,7 +32,6 @@
 export default {
   name: "App",
   components: {
-    // HelloWorld符号
   },
   data() {
     return {
@@ -122,6 +129,26 @@ export default {
           return this.symbol;
       }
     },
+    copyToClip(content, message) {
+      var aux = document.createElement("input"); 
+      aux.setAttribute("value", content); 
+      document.body.appendChild(aux); 
+      aux.select();
+      document.execCommand("copy"); 
+      document.body.removeChild(aux);
+      if (message == null) {
+          this.$notify({
+          title: '成功',
+          message: '复制成功',
+          type: 'success'
+        });
+      } else{
+          this.$notify.error({
+          title: '错误',
+          message: message
+        });
+      }
+    }
   },
 };
 </script>
@@ -133,10 +160,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   width: 60%;
   margin-left: 20%;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 #password {
   margin-left: 10px;
-  margin-bottom: 30px;
+  
+}
+.el-input.is-disabled .el-input__inner {
+  background-color: #fff;
+  color: #000;
+}
+.refresh-button {
+  font-size: 20px;
+  border: none;
+  background-color:rgba(255,255,255,0);
 }
 </style>
