@@ -3,7 +3,7 @@
 	"description": "能够轻松的生成随机密码",
 	"main": "index.html",
 	"version": "0.0.1",
-	"logo": "../src/assets/logo.png",
+	"logo": "logo.png",
 	"features": [
 		{
 		  "code": "randompassword",
