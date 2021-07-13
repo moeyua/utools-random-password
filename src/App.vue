@@ -5,7 +5,9 @@
       <el-form-item label-width="0">
         <el-input v-model="password" id="password" size="large" disabled>
           <div slot="suffix" style="background-color:#FFF;height: 38px;margin-top:1px">
-          <el-button icon="el-icon-refresh" circle  class="refresh-button" @click="generate"></el-button>
+          <el-button icon="el-icon-refresh" circle  class="refresh-button"
+          :class="{'rotate360':showAnimate}" @click="play"
+          ></el-button>
           </div>
           <el-button slot="append" @click="copyToClip(password)">复制</el-button>
         </el-input>
@@ -96,6 +98,7 @@ export default {
       ],
       number: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
       symbol: ["~", "!", "@", "#", "$", "%", "^", "&", "*", "?", "_", "-"],
+      showAnimate: false
     };
   },
   mounted() {
@@ -148,6 +151,16 @@ export default {
           message: message
         });
       }
+    },
+    play() {
+      this.showAnimate = true;
+      this.generate();
+      setTimeout(()=>{
+        this.reset()
+      }, 500 )    
+    },
+    reset() {
+      this.showAnimate = false
     }
   },
 };
@@ -174,5 +187,13 @@ export default {
   font-size: 20px;
   border: none;
   background-color:rgba(255,255,255,0);
+}
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotate360 {
+    animation: rotate360 .5s ease-out 0s;
 }
 </style>
