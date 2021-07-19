@@ -2,6 +2,12 @@
 能够简单的生成随机密码
 - 目前特殊符号支持 "~", "!", "@", "#", "$", "%", "^", "&", "*", "?", "_", "-"
 
+## 更新日志
+### Version 0.0.2 
+- 移除指针在密码框上的禁止图标
+- 更改图标
+- 添加README
+
 ## 预览插件
 ![预览](https://i.loli.net/2021/07/19/Kb2WuFRr8LwnGaH.png)
 
@@ -14,6 +20,6 @@
 5. 通过关键字["密码", "随机", "password", "random", "pwd"]快速启动
 
 ## web使用（通过浏览器直接使用）
-https://moeyua.github.io/random-password/
+[https://moeyua.github.io/random-password/](https://moeyua.github.io/random-password/)
 
-- 项目已发布在 https://github.com/Moeyua/random-password 欢迎star，如果在使用过程中发现bug或者有好的建议欢迎提交issue。
+- 项目已发布在 [https://github.com/Moeyua/random-password](https://github.com/Moeyua/random-password) 欢迎star，如果在使用过程中发现bug或者有好的建议欢迎提交issue。
