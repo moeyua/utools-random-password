@@ -11,7 +11,7 @@
 2. 在插件中心搜索【随机密码】并下载，或者在[random-password](https://github.com/Moeyua/random-password/releases)下载安装包
 3. 将文件拖入到主窗口安装插件
 4. 启用插件
-5. 通过关键字["密码", "随机", "password", "random", "pwd"]快速启动 
+5. 通过关键字["密码", "随机", "password", "random", "pwd"]快速启动
 
 ## web使用（通过浏览器直接使用）
 https://moeyua.github.io/random-password/
