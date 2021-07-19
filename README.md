@@ -21,7 +21,8 @@ https://moeyua.github.io/random-password/
 ## utoos plugin
 - utools版本在utools-plugin分支
 - vue.config.js中的publicPath为`./`
-- 将utools文件夹中的文件在打包后复制一份到dist根目录，并在修改后及时备份
+- ~~ 将utools文件夹中的文件在打包后复制一份到dist根目录，并在修改后及时备份 ~~ 
+- utools的配置文件会自动打包进dist目录
 
 ## Project setup
 ```

@@ -2,7 +2,7 @@
 	"pluginName": "随机密码",
 	"description": "能够轻松的生成随机密码",
 	"main": "index.html",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"logo": "logo.png",
 	"author": "Moeyua",
 	"features": [

@@ -183,6 +183,13 @@ export default {
   background-color: #fff;
   color: #000;
 }
+.el-input.is-disabled .el-input__inner {
+  cursor: text;
+}
+.el-input-group__append, .el-input-group__prepend {
+  background-color: rgb(64, 158, 255);
+  color: #fff;
+}
 .refresh-button {
   font-size: 20px;
   border: none;
