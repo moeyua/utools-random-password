@@ -16,32 +16,4 @@
 ## web使用（通过浏览器直接使用）
 https://moeyua.github.io/random-password/
 
-
-
-## utoos plugin
-- utools版本在utools-plugin分支
-- vue.config.js中的publicPath为`./`
-- 将utools文件夹中的文件在打包后复制一份到plugin.json，并在修改后及时备份
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 项目已发布在 https://github.com/Moeyua/random-password 欢迎star，如果在使用过程中发现bug或者有好的建议欢迎提交issue。

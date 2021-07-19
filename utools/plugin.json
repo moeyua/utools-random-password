@@ -1,0 +1,18 @@
+{
+	"pluginName": "随机密码",
+	"description": "能够轻松的生成随机密码",
+	"main": "index.html",
+	"version": "0.0.1",
+	"logo": "logo.png",
+	"author": "Moeyua",
+	"features": [
+		{
+		  "code": "randompassword",
+		  "explain": "生成随机的密码",
+			"cmds":["密码", "随机", "password", "random", "pwd"]
+		}
+	],
+	"development": {
+		"main": "http://172.31.21.114:8080/index.html"
+	}
+}
