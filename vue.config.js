@@ -1,25 +1,15 @@
-// utools打包时使用这个
 const CopyPlugin = require("copy-webpack-plugin");
+let plugins = process.env.VUE_APP_MODE === 'utools' ?
+    [
+        new CopyPlugin([
+            { from: 'src/config/plugin.json'},
+            { from: 'src/assets/logo.png', to: './assets/logo.png' }
+        ])
+    ] : [];
 module.exports = {
-    // publicPath: process.env.NODE_ENV === 'production'
-    // ? '/random-password/'
-    // : '/'
-    publicPath: './',
+    publicPath: process.env.VUE_APP_PATH,
     productionSourceMap: false,
     configureWebpack: {
-        plugins: [
-            new CopyPlugin(
-                [
-                    { from: 'utools' }
-                ]
-            ),
-        ],
+        plugins: plugins,
     }
 } 
-
-// git-pages打包使用这个
-// module.exports = {
-//     publicPath: process.env.NODE_ENV === 'production'
-//     ? '/random-password/'
-//     : '/'
-// }

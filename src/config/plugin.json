@@ -1,6 +1,6 @@
 {
 	"main": "index.html",
-	"logo": "logo.png",
+	"logo": "../assets/logo.png",
 	"features": [
 		{
 		  "code": "随机密码",
@@ -9,6 +9,6 @@
 		}
 	],
 	"development": {
-		"main": "http://172.31.21.114:8080/index.html"
+		"main": "http://localhost:8080"
 	}
 }

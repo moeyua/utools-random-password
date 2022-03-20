@@ -51,33 +51,6 @@ export default {
     this.generate();
   },
   methods: {
-    // generate() {
-    //   if(this.symbolType.length === 0) {
-    //     this.$alert('请至少选择一项')
-    //   }else {
-    //     this.password = '';
-    //     for (let index = 0; index < this.length; index++) {
-    //       this.password += this.randomSymbol(this.randomType());
-    //     }
-    //   }
-    // },
-    // randomSymbol(array) {
-    //   return array[Math.floor(Math.random() * array.length)];
-    // },
-    // randomType() {
-    //   let type =
-    //     this.symbolType[Math.floor(Math.random() * this.symbolType.length)];
-    //   switch (type) {
-    //     case "ABC":
-    //       return this.capitalise;
-    //     case "abc":
-    //       return this.lowercase;
-    //     case "123":
-    //       return this.number;
-    //     case "#$*":
-    //       return this.symbol;
-    //   }
-    // },
     pool() {
       let symbolType = this.symbolType;
       let pool = "";
@@ -102,25 +75,20 @@ export default {
     generate() {
       this.password = Mock.Random.string( this.pool(), this.length );
     },
-    copyToClip(content, message) {
-      var aux = document.createElement("input"); 
-      aux.setAttribute("value", content); 
-      document.body.appendChild(aux); 
-      aux.select();
-      document.execCommand("copy"); 
-      document.body.removeChild(aux);
-      if (message == null) {
-          this.$notify({
+    copyToClip(content) {
+      let _this = this;
+      navigator.clipboard.writeText(content).then(function() {
+        _this.$notify({
           title: '成功',
           message: '复制成功',
           type: 'success'
-        });
-      } else{
-          this.$notify.error({
-          title: '错误',
-          message: message
-        });
-      }
+        })
+      }, function () {
+        _this.$notify.error({
+          title: '失败',
+          message: '复制失败',
+        })
+      })
     },
     play() {
       this.showAnimate = true;
