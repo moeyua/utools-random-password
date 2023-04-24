@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@moeyua/cipher": "^0.0.3",
     "vue": "^3.2.47"
   },
   "devDependencies": {

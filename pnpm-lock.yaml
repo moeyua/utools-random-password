@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@moeyua/cipher':
+    specifier: ^0.0.3
+    version: 0.0.3
   vue:
     specifier: ^3.2.47
     version: 3.2.47
@@ -320,6 +323,11 @@ packages:
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@moeyua/cipher@0.0.3:
+    resolution: {integrity: sha512-x2LoW5D/Zc4QCiRoA59i8zx3zH5h4uPmhBFaL3h4G1drqSEspdxgK4ILGHaVBrL5XaV1zQo+KWBAcgLHxcPBIw==}
+    engines: {node: '>=16.14.0', pnpm: '>=8.0.0'}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
